@@ -13,11 +13,12 @@ public class CustomCache<K, V> {
 
 	public void put(K key, V value) {
 		System.out.println(key.getClass());
-
+		
 		if (listCache.isEmpty()) {
 			add(key, value);
 		} else {
 			K k = listCache.get(0).getKey();
+			System.out.println(key.getClass() instanceof k);
 		}
 	}
 
